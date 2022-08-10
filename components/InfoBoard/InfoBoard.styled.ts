@@ -29,8 +29,8 @@ export const Info = styled.h3`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   margin-top: 15px;
   font-size: 50px;
   background-color: ${(p) => p.theme.colors.alt};

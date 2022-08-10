@@ -11,20 +11,24 @@ export const Wrapper = styled.div`
   justify-content: center;
   padding-top: 60px;
   background-color: ${(p) => p.theme.colors.primary};
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `;
 
 export const List = styled.ul`
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
-  width: 400px;
-  margin: -20px 0 0 -20px;
+  width: 300px;
+  margin: -10px 0 0 -10px;
 `;
 
 export const Item = styled.li`
-  margin: 20px 0px 0px 20px;
-  width: 60px;
-  height: 60px;
+  margin: 10px 0px 0px 10px;
+  width: 50px;
+  height: 50px;
 `;
 
 export const PickButton = styled.button`

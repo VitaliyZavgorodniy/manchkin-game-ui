@@ -65,7 +65,7 @@ const Home: NextPage = () => {
       />
 
       <ButtonContainer>
-        <CommonButton title="Pick Monster" onClick={() => setOpenModal(true)} />
+        <CommonButton title="Monster" onClick={() => setOpenModal(true)} />
       </ButtonContainer>
     </MainLayout>
   );
@@ -73,9 +73,8 @@ const Home: NextPage = () => {
 
 const ButtonContainer = styled.div`
   position: fixed;
-  left: 50%;
+  right: 10px;
   bottom: 10px;
-  transform: translateX(-50%);
 `;
 
 export default Home;

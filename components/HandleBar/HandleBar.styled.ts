@@ -10,7 +10,7 @@ export const Wrapper = styled.div`
 
 export const Title = styled.h3`
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: 24px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 300px;
 `;
@@ -25,7 +25,8 @@ export const ValueBoard = styled.h4`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px 25px;
+  width: 100px;
+  padding: 5px 0px;
   border: 1px solid ${(p) => p.theme.colors.holder};
   border-right: none;
   border-left: none;
