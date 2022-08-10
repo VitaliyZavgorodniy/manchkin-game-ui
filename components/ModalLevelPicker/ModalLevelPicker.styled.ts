@@ -55,4 +55,10 @@ export const CloseButton = styled.button`
   background-color: transparent;
   color: ${(p) => p.theme.colors.accent};
   font-size: 32px;
+  transition: ${(p) => p.theme.transitions.main} color;
+
+  &:hover {
+    cursor: pointer;
+    color: ${(p) => p.theme.colors.contrast};
+  }
 `;
