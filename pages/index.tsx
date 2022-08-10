@@ -1,13 +1,12 @@
 import { useState, useEffect } from 'react';
 import type { NextPage } from 'next';
+import styled from 'styled-components';
 
 import MainLayout from 'layouts/MainLayout';
 import InfoBoard from 'components/InfoBoard';
 import HandleBar from 'components/HandleBar';
 import ModalLevelPicker from 'components/ModalLevelPicker';
 import CommonButton from 'components/CommonButton';
-
-import { ButtonContainer } from './index.styled';
 
 const Home: NextPage = () => {
   const [level, setLevel] = useState(1);
@@ -71,5 +70,12 @@ const Home: NextPage = () => {
     </MainLayout>
   );
 };
+
+const ButtonContainer = styled.div`
+  position: fixed;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+`;
 
 export default Home;
