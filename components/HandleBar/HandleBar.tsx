@@ -1,4 +1,12 @@
-import { Wrapper } from './HandleBar.styled';
+import {
+  Wrapper,
+  Title,
+  Board,
+  ValueBoard,
+  Button,
+  FirstButton,
+  LastButton,
+} from './HandleBar.styled';
 
 import { AiOutlinePlus, AiOutlineMinus, AiOutlineClear } from 'react-icons/ai';
 
@@ -18,18 +26,22 @@ const HandleBar = ({
   title,
 }: IHandleBarProps) => (
   <Wrapper>
-    <button onClick={decrement}>
-      <AiOutlineMinus />
-    </button>
-    <span>
-      {title}: {value}
-    </span>
-    <button onClick={increment}>
-      <AiOutlinePlus />
-    </button>
-    <button onClick={() => reset()}>
-      <AiOutlineClear />
-    </button>
+    <Title>{title}</Title>
+
+    <Board>
+      <FirstButton onClick={decrement}>
+        <AiOutlineMinus />
+      </FirstButton>
+      <ValueBoard>{value}</ValueBoard>
+
+      <LastButton onClick={increment}>
+        <AiOutlinePlus />
+      </LastButton>
+
+      <Button onClick={() => reset()}>
+        <AiOutlineClear />
+      </Button>
+    </Board>
   </Wrapper>
 );
 

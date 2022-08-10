@@ -2,8 +2,12 @@ import { useState, useEffect } from 'react';
 import type { NextPage } from 'next';
 
 import MainLayout from 'layouts/MainLayout';
+import InfoBoard from 'components/InfoBoard';
 import HandleBar from 'components/HandleBar';
 import ModalLevelPicker from 'components/ModalLevelPicker';
+import CommonButton from 'components/CommonButton';
+
+import { ButtonContainer } from './index.styled';
 
 const Home: NextPage = () => {
   const [level, setLevel] = useState(1);
@@ -33,7 +37,11 @@ const Home: NextPage = () => {
         />
       )}
 
-      <div>Your power: {power}</div>
+      <InfoBoard
+        powerLevel={power}
+        monsterLevel={monsterLevel}
+        result={result}
+      />
 
       <HandleBar
         title="Hero level"
@@ -57,9 +65,9 @@ const Home: NextPage = () => {
         decrement={() => setPowerUp((state) => state - 1)}
       />
 
-      <div>Monster Level: {monsterLevel}</div>
-      <button onClick={() => setOpenModal(true)}>Pick Monster Level</button>
-      <div>Result: {result}</div>
+      <ButtonContainer>
+        <CommonButton title="Pick Monster" onClick={() => setOpenModal(true)} />
+      </ButtonContainer>
     </MainLayout>
   );
 };
