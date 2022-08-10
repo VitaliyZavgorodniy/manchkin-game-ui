@@ -29,12 +29,11 @@ const Home: NextPage = () => {
 
   return (
     <MainLayout title="Munchkin UI">
-      {isOpenModal && (
-        <ModalLevelPicker
-          close={() => setOpenModal(false)}
-          handleLevel={handleMonster}
-        />
-      )}
+      <ModalLevelPicker
+        isOpen={isOpenModal}
+        close={() => setOpenModal(false)}
+        handleLevel={handleMonster}
+      />
 
       <InfoBoard
         powerLevel={power}

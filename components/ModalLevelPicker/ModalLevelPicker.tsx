@@ -9,11 +9,16 @@ import {
 import { MdClear } from 'react-icons/md';
 
 interface IModalLevelPickerProps {
+  isOpen: boolean;
   close: () => void;
   handleLevel: (value: number) => void;
 }
 
-const ModalLevelPicker = ({ close, handleLevel }: IModalLevelPickerProps) => {
+const ModalLevelPicker = ({
+  isOpen,
+  close,
+  handleLevel,
+}: IModalLevelPickerProps) => {
   const handleValue = (level: number) => {
     handleLevel(level);
     close();
@@ -32,7 +37,7 @@ const ModalLevelPicker = ({ close, handleLevel }: IModalLevelPickerProps) => {
   };
 
   return (
-    <Wrapper>
+    <Wrapper isOpen={isOpen}>
       <CloseButton onClick={close}>
         <MdClear />
       </CloseButton>

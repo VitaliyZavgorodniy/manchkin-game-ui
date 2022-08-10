@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  position: fixed;
+interface WrapperProps {
+  isOpen: boolean;
+}
+
+export const Wrapper = styled.div<WrapperProps>`
+  position: absolute;
   top: 0;
-  left: 0;
+  right: ${(p) => (p.isOpen ? '0' : '-100vw')};
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
@@ -11,6 +15,7 @@ export const Wrapper = styled.div`
   justify-content: center;
   padding-top: 60px;
   background-color: ${(p) => p.theme.colors.primary};
+  transition: ${(p) => p.theme.transitions.main} right;
 
   &::-webkit-scrollbar {
     display: none;
