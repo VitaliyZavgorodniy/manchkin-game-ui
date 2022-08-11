@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div`
-  margin-bottom: 40px;
-`;
-
 export const List = styled.ul`
   display: flex;
   justify-content: center;
@@ -22,7 +18,7 @@ export const Item = styled.li`
 `;
 
 export const Title = styled.h2`
-  font-size: 28px;
+  font-size: 18px;
 `;
 
 export const Info = styled.h3`

@@ -1,4 +1,4 @@
-import { Wrapper, List, Item, Title, Info } from './InfoBoard.styled';
+import { List, Item, Title, Info } from './InfoBoard.styled';
 
 interface IInfoBarProps {
   powerLevel: number;
@@ -7,24 +7,22 @@ interface IInfoBarProps {
 }
 
 const InfoBoard = ({ powerLevel, monsterLevel, result }: IInfoBarProps) => (
-  <Wrapper>
-    <List>
-      <Item>
-        <Title>Power</Title>
-        <Info>{powerLevel}</Info>
-      </Item>
+  <List>
+    <Item>
+      <Title>Power</Title>
+      <Info>{powerLevel}</Info>
+    </Item>
 
-      <Item>
-        <Title>Monster</Title>
-        <Info>{monsterLevel}</Info>
-      </Item>
+    <Item>
+      <Title>Monsters</Title>
+      <Info>{monsterLevel}</Info>
+    </Item>
 
-      <Item>
-        <Title>Result</Title>
-        <Info>{result}</Info>
-      </Item>
-    </List>
-  </Wrapper>
+    <Item>
+      <Title>Result</Title>
+      <Info>{result}</Info>
+    </Item>
+  </List>
 );
 
 export default InfoBoard;

@@ -25,7 +25,7 @@ const ModalLevelPicker = ({
   };
 
   const renderList = () => {
-    const numbers = [...Array(35).keys()];
+    const numbers = Array.from(Array(35).keys(), (n) => n + 1);
 
     const elementHTML = numbers.map((item) => (
       <Item key={item}>
