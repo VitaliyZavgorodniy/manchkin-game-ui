@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import type { NextPage } from 'next';
-import { nanoid } from 'nanoid';
+import { nanoid as id } from 'nanoid';
 
 import MainLayout from 'layouts/MainLayout';
 import InfoBoard from 'components/InfoBoard';
@@ -37,10 +37,7 @@ const Home: NextPage = () => {
   }, [monstersList]);
 
   const handleAddMonster = (monsterLevel: number) =>
-    setMonstersList((state) => [
-      ...state,
-      { id: nanoid(), value: monsterLevel },
-    ]);
+    setMonstersList((state) => [...state, { id: id(), value: monsterLevel }]);
 
   const handleRemoveMonster = (id: string) =>
     setMonstersList((state) => state.filter((list) => id !== list.id));
